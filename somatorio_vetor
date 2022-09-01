@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void printVetor(int v[], int n) {
+
+    for(int i=0; i<n; i++) {
+            printf("%i ", v[i]);
+        }
+    printf("\n");
+
+    }
+
+int somatorio(int v[], int n){
+
+    if(n == 0){
+        return 0;
+    }
+    else {
+        return v[n-1] + somatorio(v, n-1);
+    }
+
+}
+
+int main()
+{
+    int n;
+
+    printf("Digite o tamanho do vetor: ");
+    scanf("%i", &n);
+
+    int v[n];
+
+    for(int i = 0; i<n; i++){
+        printf("Preencha o vetor: ");
+        scanf("%i", &v[i]);
+    }
+
+    printf("Vetor: \n");
+
+    printVetor(v, n);
+
+    int soma = somatorio(v, n);
+
+    printf("O somatorio do vetor e %i", soma);
+
+    return 0;
+}

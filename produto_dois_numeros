@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int produto(int n, int m){
+
+    if(m == 0){
+        return m;
+    }
+    else {
+        return n + produto(n, m-1);
+    }
+
+}
+
+int main()
+{
+    int n, m;
+
+    printf("Digite o valor do primeiro numero: ");
+    scanf("%i", &n);
+
+    printf("Digite o valor do segundo numero: ");
+    scanf("%i", &m);
+
+    int prod = produto(n, m);
+
+    printf("O produto dos numeros e %i", prod);
+
+    return 0;
+}
+P
